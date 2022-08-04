@@ -1,6 +1,5 @@
 def TreeOfLife(H, W, N, tree):
     tree_result = []
-    result = []
     for i in range(H):
         a = []
         for j in tree[i]:
@@ -88,6 +87,7 @@ def TreeOfLife(H, W, N, tree):
                         
                     else:
                         continue
+    result = []
     for i in range(H):
         string = ''
         for j in range(W):
