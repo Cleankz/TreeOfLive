@@ -1,6 +1,6 @@
 def TreeOfLife(H, W, N, tree):
     tree_result = []
-    for i in range(H):
+    for i in range(H): # создаем матрицу чисел
         a = []
         for j in tree[i]:
             if j ==".":
@@ -9,7 +9,7 @@ def TreeOfLife(H, W, N, tree):
                 a.append(1)
         tree_result.append(a)
      
-    for time in range(N):
+    for time in range(N): # цикл изменения матрицы 
         if time % 2 == 0:
             for x in range(H):
                 tree_result[x][:]=[i+1 for i in tree_result[x]]
@@ -88,7 +88,7 @@ def TreeOfLife(H, W, N, tree):
                     else:
                         continue
     result = []
-    for i in range(H):
+    for i in range(H): # цикл который первращает цифры обратно в символы 
         string = ''
         for j in range(W):
             if tree_result[i][j] > 0:
